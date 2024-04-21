@@ -1,53 +1,65 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Outer LinearLayout to hold the entire card -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="20dp">
+    android:paddingBottom="@dimen/padding20dp">
 
+    <!-- Inner LinearLayout to contain the card elements with custom background -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@drawable/custom_corner">
+        android:background="@drawable/custom_corner"
+        tools:ignore="UselessParent">
 
+        <!-- MaterialCardView for elevation and corner radius -->
         <com.google.android.material.card.MaterialCardView
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="0dp">  <!-- Set elevation to 0 if you don’t want shadows -->
+            app:cardCornerRadius="@dimen/radius15dp"
+            tools:ignore="RedundantNamespace"
+            app:cardElevation="@dimen/elevation0dp">  <!-- Set elevation to 0 if you don’t want shadows -->
 
+            <!-- ImageView to display image -->
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:scaleType="centerCrop" />
+                android:layout_width="@dimen/width100dp"
+                android:layout_height="@dimen/height100dp"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
 
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Inner LinearLayout to hold text content -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp">
+            android:paddingStart="@dimen/padding10dp"
+            android:paddingTop="@dimen/padding10dp"
+            tools:ignore="RtlSymmetry">
 
+            <!-- TextView for title -->
             <TextView
                 android:id="@+id/textViewTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:textSize="18sp"
+                android:paddingBottom="@dimen/padding10dp"
+                android:textSize="@dimen/text18sp"
                 android:textStyle="bold" />
 
+            <!-- TextView for description -->
             <TextView
                 android:id="@+id/textViewDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
+                android:textSize="@dimen/text12sp"
                 android:textStyle="bold" />
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

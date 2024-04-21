@@ -1,3 +1,16 @@
+<!--
+    This XML layout file represents the main layout of the app, which includes a FrameLayout
+    for hosting fragments and a BottomNavigationView for navigation.
+
+    - The FrameLayout with id "frame_container" serves as a container for displaying fragments.
+      Fragments will be dynamically replaced within this FrameLayout as users navigate through the app.
+
+    - The BottomNavigationView with id "navigation" provides a navigation bar at the bottom of the screen.
+      It allows users to switch between different sections or functionalities of the app.
+
+    Note: This layout follows a RelativeLayout structure, positioning the FrameLayout
+    above the BottomNavigationView.
+-->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

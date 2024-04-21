@@ -1,3 +1,8 @@
+/*
+ * Trainer.java
+ * This class represents a trainer and extends RealmObject for Realm database functionality.
+ */
+
 package com.example.realmapp.model;
 
 import io.realm.RealmObject;
@@ -5,12 +10,13 @@ import io.realm.annotations.PrimaryKey;
 
 public class Trainer extends RealmObject {
     @PrimaryKey
-    private String id;
-    private String name;
-    private String description;
-    private int imageResourceId;
+    private String id; // Unique identifier for the trainer
+    private String name; // Name of the trainer
+    private String description; // Description of the trainer
+    private int imageResourceId; // Resource ID of the image associated with the trainer
 
-    // Getters and Setters
+    // Getters and setters for the Trainer fields
+
     public String getId() {
         return id;
     }

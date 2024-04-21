@@ -1,38 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Example layout for ClassDetailsFragment -->
+<!--
+    Example layout for the TrainerDetailFragment.
+    Displays detailed information about a trainer, including their image, title, description, and a button to book the trainer.
+
+    - The root layout is a vertical LinearLayout with padding.
+    - It includes an ImageView for the trainer's image, TextViews for the title and description, and a Button to book the trainer.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="@dimen/padding16dp"
     tools:context=".fragment.TrainerDetailFragment">
 
+    <!-- ImageView for trainer's image -->
     <ImageView
         android:id="@+id/imageViewTrainer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop" />
+        android:layout_height="@dimen/height200dp"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
 
+    <!-- TextView for trainer's title -->
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:paddingTop="8dp" />
+        android:textSize="@dimen/text24sp"
+        android:paddingTop="@dimen/padding8dp" />
 
+    <!-- TextView for trainer's description -->
     <TextView
         android:id="@+id/textViewDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:paddingTop="4dp" />
+        android:textSize="@dimen/text16sp"
+        android:paddingTop="@dimen/padding4dp" />
 
+    <!-- Button to book the trainer -->
     <Button
         android:id="@+id/bookTrainerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book Trainer"
-        android:layout_marginTop="16dp"
+        android:text="@string/bookTrainer"
+        android:layout_marginTop="@dimen/margin16dp"
         android:layout_gravity="center_horizontal"/>
 </LinearLayout>

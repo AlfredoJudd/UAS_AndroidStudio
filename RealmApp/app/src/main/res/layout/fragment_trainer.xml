@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This XML layout file represents the layout for the TrainerFragment, which displays a list of available trainers.
+    It includes a TextView for the title and a RecyclerView to display the list of trainers.
+
+    - The root layout is a LinearLayout with vertical orientation, centered content, and padding.
+    - It contains a TextView for the title "Available Trainers" and a RecyclerView below it.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="20dp"
+    android:padding="@dimen/padding20dp"
     tools:context=".fragment.TrainerFragment">
 
+    <!-- Title TextView -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:paddingBottom="20dp"
-        android:text="Available trainer"
+        android:layout_gravity="start"
+        android:paddingBottom="@dimen/padding20dp"
+        android:text="@string/availableTrainer"
         android:textSize="20sp" />
 
+    <!-- RecyclerView for trainers -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/trainerRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </LinearLayout>

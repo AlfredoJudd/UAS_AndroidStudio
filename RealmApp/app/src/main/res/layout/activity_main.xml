@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This XML layout file represents the main screen UI of the application's login/signup page.
+
+    - The root layout is a vertical LinearLayout with a background set to a drawable resource "mainbackground".
+
+    - The layout is divided into three sections using Views with layout_weight:
+      1. The top section, which occupies 1/3 of the vertical space, is empty to create spacing.
+      2. The middle section contains a TextView displaying a welcome message.
+      3. The bottom section, which also occupies 1/3 of the vertical space, is empty to create spacing.
+
+    - Inside the middle section, there's a LinearLayout with vertical orientation and gravity set to center horizontal.
+      This LinearLayout contains a TextView displaying a welcome message centered horizontally.
+
+    - Below the welcome message, there's another LinearLayout with vertical orientation and gravity set to center horizontal.
+      This LinearLayout contains two TextViews representing the login and signup buttons.
+
+    - The login button TextView has a custom background, clickable, and focusable attributes.
+      It displays the text "Login" and triggers the login action when clicked.
+
+    - The signup button TextView also has a custom background, clickable, and focusable attributes.
+      It displays the text "Sign Up" and navigates to the signup screen when clicked.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,8 +32,8 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="@dimen/height0dp"
+        android:layout_weight="@dimen/weight1" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,55 +42,52 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="300dp"
+            android:layout_width="@dimen/width300dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="40sp"
+            android:textSize="@dimen/text40sp"
             android:textStyle="bold"
-            android:text="Welcome"/>
+            android:text="@string/welcome"/>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="@dimen/height0dp"
+        android:layout_weight="@dimen/weight1" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="@dimen/margin100dp"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/buttonLogin"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="@dimen/width300dp"
+            android:layout_height="@dimen/height40dp"
+            android:layout_marginBottom="@dimen/margin20dp"
             android:background="@drawable/custom_login_background"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/text16sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/buttonRegister"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/width300dp"
+            android:layout_height="@dimen/height40dp"
             android:background="@drawable/custom_signup_background"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center"
-            android:text="Sign Up"
+            android:text="@string/signUp"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/text16sp"
             android:textStyle="bold" />
-
-
     </LinearLayout>
-
 </LinearLayout>

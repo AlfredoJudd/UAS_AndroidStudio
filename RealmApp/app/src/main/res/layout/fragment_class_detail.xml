@@ -1,45 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Example layout for ClassDetailsFragment -->
+<!--
+    This XML layout file represents the layout for displaying details of a class in the ClassDetailsFragment.
+    It includes an ImageView to display the class image, TextViews to show title, description, and time of the class,
+    and a Button to allow users to book the class.
+
+    - The root layout is a vertical LinearLayout with padding, occupying the entire screen.
+    - Inside the root LinearLayout, there's an ImageView to display the class image, followed by TextViews for title,
+      description, and time of the class.
+    - Finally, there's a Button at the center of the layout for booking the class.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="@dimen/padding16dp"
     tools:context=".fragment.ClassDetailFragment">
 
     <ImageView
         android:id="@+id/imageViewClass"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop" />
+        android:layout_height="@dimen/height200dp"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:paddingTop="8dp" />
+        android:textSize="@dimen/text24sp"
+        android:paddingTop="@dimen/padding8dp" />
 
     <TextView
         android:id="@+id/textViewDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:paddingTop="4dp" />
+        android:textSize="@dimen/text16sp"
+        android:paddingTop="@dimen/padding4dp" />
 
     <TextView
         android:id="@+id/textViewTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:paddingTop="4dp" />
+        android:textSize="@dimen/text14sp"
+        android:paddingTop="@dimen/padding4dp" />
 
     <Button
         android:id="@+id/bookClassButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book Class"
-        android:layout_marginTop="16dp"
+        android:text="@string/bookClass"
+        android:layout_marginTop="@dimen/margin16dp"
         android:layout_gravity="center_horizontal"/>
 </LinearLayout>

@@ -1,3 +1,8 @@
+/*
+ * MyApp.java
+ * This class extends the Application class and initializes Realm database configuration and initial data population.
+ */
+
 package com.example.realmapp;
 
 import android.app.Application;
@@ -31,13 +36,14 @@ public class MyApp extends Application {
         populateInitialData();
     }
 
+    // Method to populate initial data into the Realm database
     private void populateInitialData() {
         Realm realm = Realm.getDefaultInstance();
         realm.executeTransactionAsync(r -> {
             // Clear all existing data
             r.deleteAll();
 
-            // Now repopulate the database
+            // Now repopulate the database with initial gym classes and trainers
             GymClass holdClass = r.createObject(GymClass.class, UUID.randomUUID().toString());
             holdClass.setTitle("Dumbell Hold");
             holdClass.setDescription("Description for Dumbell Hold");
@@ -84,5 +90,4 @@ public class MyApp extends Application {
             Log.e("Realm", "Error populating data: ", error);
         });
     }
-
 }

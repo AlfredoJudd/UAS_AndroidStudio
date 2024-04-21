@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This XML layout file represents a vertical LinearLayout containing a TextView and a RecyclerView.
+    It is typically used to display a list of available classes.
+
+    - The root layout is a vertical LinearLayout with padding set to create spacing, occupying the entire screen.
+    - Inside the root LinearLayout, there's a TextView displaying the text "Available Classes" aligned to the end.
+    - Below the TextView, there's a RecyclerView with id "classesRecyclerView" to display the list of classes.
+
+    Note: The RecyclerView should be populated dynamically with the available classes.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="20dp"
+    android:padding="@dimen/padding20dp"
     tools:context=".fragment.ClassFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:paddingBottom="20dp"
-        android:textSize="20sp"
-        android:text="Available class" />
+        android:layout_gravity="end"
+        android:paddingBottom="@dimen/margin20dp"
+        android:textSize="@dimen/text20sp"
+        android:text="@string/availableClass" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/classesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </LinearLayout>

@@ -1,3 +1,8 @@
+/*
+ * User.java
+ * This class represents a user and extends RealmObject for Realm database functionality.
+ */
+
 package com.example.realmapp.model;
 
 import io.realm.RealmList;
@@ -7,12 +12,13 @@ import io.realm.annotations.PrimaryKey;
 public class User extends RealmObject {
     @PrimaryKey
     private String id; // Unique ID for the user
-    private String username;
-    private String password;
+    private String username; // Username of the user
+    private String password; // Password of the user
     private RealmList<GymClass> bookedClasses; // List to store booked gym classes
-    private RealmList<Trainer> bookedTrainer; // List to store booked gym classes
+    private RealmList<Trainer> bookedTrainer; // List to store booked trainers
 
-    // Getters and setters
+    // Getters and setters for the User fields
+
     public String getId() {
         return id;
     }

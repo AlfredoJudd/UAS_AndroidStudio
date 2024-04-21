@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">RealmApp</string>
+    <string name="enterUsername">Enter username</string>
+    <string name="enterPassword">Enter password</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="signUp">Sign Up</string>
+    <string name="availableClass">Available class</string>
+    <string name="bookClass">Book Class</string>
+    <string name="featuredClasses">Featured Classes</string>
+    <string name="seeAll">See All</string>
+    <string name="greeting">Hello!</string>
+    <string name="username">Username</string>
+    <string name="logout">Logout</string>
+    <string name="bookedClasses">Booked Classes</string>
+    <string name="bookedTrainers">Booked Trainers</string>
+    <string name="availableTrainer">Available trainer</string>
+    <string name="bookTrainer">Book Trainer</string>
 </resources>

@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    This XML layout file represents the layout for the HomeFragment, which displays featured classes and trainers.
+    It includes a NestedScrollView to enable scrolling, and within it, two RecyclerViews for displaying featured classes
+    and featured trainers, respectively. Each section includes a title and a "See All" button.
+
+    - The root layout is a FrameLayout with padding, occupying the entire screen.
+    - Inside the FrameLayout, there's a NestedScrollView to enable scrolling of the content.
+    - Within the NestedScrollView, there's a LinearLayout for arranging content vertically.
+    - The first section displays featured classes, including a title and a "See All" button, followed by a RecyclerView.
+    - The second section displays featured trainers similarly, with a title, a "See All" button, and a RecyclerView.
+-->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:padding="@dimen/padding20dp"
     tools:context=".fragment.HomeFragment">
 
     <!-- Scrollable container -->
@@ -19,58 +30,62 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <!-- Featured classes section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingBottom="20dp">
+                android:paddingBottom="@dimen/padding20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:text="Featured Classes" />
+                    android:layout_weight="@dimen/weight1"
+                    android:textSize="@dimen/text20sp"
+                    android:text="@string/featuredClasses"
+                    tools:ignore="InefficientWeight" />
 
                 <TextView
                     android:id="@+id/seeAllClassesButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="See All"
+                    android:textSize="@dimen/text16sp"
+                    android:text="@string/seeAll"
                     android:textColor="?attr/colorPrimary"
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground" />
-
             </LinearLayout>
 
+            <!-- RecyclerView for featured classes -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/featuredClassesRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false" />
 
+            <!-- Featured trainers section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp">
+                android:paddingTop="@dimen/padding20dp"
+                android:paddingBottom="@dimen/padding20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:text="Featured Classes" />
+                    android:layout_weight="@dimen/weight1"
+                    android:textSize="@dimen/text20sp"
+                    android:text="@string/featuredTrainers"
+                    tools:ignore="InefficientWeight" />
 
                 <TextView
                     android:id="@+id/seeAllTrainersButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="See All"
+                    android:textSize="@dimen/text16sp"
+                    android:text="@string/seeAll"
                     android:textColor="?attr/colorPrimary"
                     android:clickable="true"
                     android:focusable="true"
@@ -78,6 +93,7 @@
 
             </LinearLayout>
 
+            <!-- RecyclerView for featured trainers -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/featuredTrainersRecyclerView"
                 android:layout_width="match_parent"
